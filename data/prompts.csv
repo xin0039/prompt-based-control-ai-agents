@@ -1,0 +1,11 @@
+prompt_id,task_type,user_prompt,control_rule
+P01,phd_application,"I feel overwhelmed about preparing my PhD application. What should I do first?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P02,decision_support,"I am not sure whether I should apply for a highly competitive doctoral position. Help me decide.","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P03,research_feedback,"My research idea about AI in education feels too broad. How should I narrow it down?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P04,ai_trust,"I worry that AI gives answers that sound confident but may be wrong. How should I evaluate AI responses?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P05,literature_review,"I need to write a literature review on human-AI interaction, but I do not know how to structure it.","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P06,supervisor_contact,"I want to contact a professor for a PhD opportunity. What should I include in the email?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P07,research_gap,"How can I identify a meaningful research gap in collaborative AI?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P08,academic_rejection,"If my PhD application is rejected, how should I interpret it and improve?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P09,ai_education,"How can students use AI tools responsibly in academic writing?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
+P10,interview_preparation,"How should I prepare for an interview for a human-AI interaction PhD position?","Keep the answer under 120 words. Use a neutral academic tone. Give exactly three suggestions."
