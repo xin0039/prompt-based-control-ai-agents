@@ -3,19 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# ------------------------------------------------------------
-# 1. Define file paths
-# ------------------------------------------------------------
-
 DATA_PATH = "../data/coded_scores.csv"
 FIGURES_DIR = "../figures"
 
 os.makedirs(FIGURES_DIR, exist_ok=True)
-
-
-# ------------------------------------------------------------
-# 2. Load coded score data
-# ------------------------------------------------------------
 
 scores = pd.read_csv(DATA_PATH)
 
@@ -26,11 +17,6 @@ print(list(scores.columns))
 
 print("\nAgent type counts:")
 print(scores["agent_type"].value_counts())
-
-
-# ------------------------------------------------------------
-# 3. Basic data validation
-# ------------------------------------------------------------
 
 expected_rows = 22
 
@@ -60,9 +46,7 @@ else:
     print("Column check passed: all required columns found.")
 
 
-# ------------------------------------------------------------
-# 4. Descriptive statistics
-# ------------------------------------------------------------
+
 
 score_columns = [
     "style_consistency",
@@ -76,19 +60,15 @@ print("\nDescriptive statistics:")
 print(scores[score_columns].describe())
 
 
-# ------------------------------------------------------------
-# 5. Mean scores by agent type
-# ------------------------------------------------------------
-
 mean_scores = scores.groupby("agent_type")[score_columns].mean()
 
 print("\nMean scores by agent type:")
 print(mean_scores)
 
 
-# ------------------------------------------------------------
-# 6. Figure 1: Average scores by agent type
-# ------------------------------------------------------------
+
+# Figures
+
 
 mean_scores.T.plot(kind="bar", figsize=(10, 6))
 
@@ -106,10 +86,6 @@ plt.close()
 print(f"\nSaved figure: {figure_path}")
 
 
-# ------------------------------------------------------------
-# 7. Figure 2: Average empathy by agent type
-# ------------------------------------------------------------
-
 empathy_scores = scores.groupby("agent_type")["empathy"].mean()
 
 empathy_scores.plot(kind="bar", figsize=(6, 4))
@@ -125,11 +101,6 @@ plt.savefig(figure_path, dpi=300)
 plt.close()
 
 print(f"Saved figure: {figure_path}")
-
-
-# ------------------------------------------------------------
-# 8. Figure 3: Average analytical clarity by agent type
-# ------------------------------------------------------------
 
 clarity_scores = scores.groupby("agent_type")["analytical_clarity"].mean()
 
@@ -147,10 +118,6 @@ plt.close()
 
 print(f"Saved figure: {figure_path}")
 
-
-# ------------------------------------------------------------
-# 9. Figure 4: Controllability scores across prompts
-# ------------------------------------------------------------
 
 controllability_table = scores.pivot(
     index="prompt_id",
@@ -173,9 +140,6 @@ plt.close()
 
 print(f"Saved figure: {figure_path}")
 
-# ------------------------------------------------------------
-# 10. Figure 5: Empathy vs Analytical Clarity
-# ------------------------------------------------------------
 
 comparison = mean_scores[["empathy", "analytical_clarity"]]
 
@@ -194,9 +158,6 @@ plt.close()
 
 print(f"Saved figure: {figure_path}")
 
-# ------------------------------------------------------------
-# 11. Preliminary findings
-# ------------------------------------------------------------
 
 print("\nPreliminary findings:")
 print(
