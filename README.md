@@ -15,7 +15,7 @@ The project is designed as a personal research portfolio related to **collaborat
 
 Can AI agents maintain distinct interaction styles while following prompt-based control rules across repeated task and interpersonal contexts?
 
-## Motivation
+## Research Aim
 
 As AI agents are increasingly used in decision support, education, travel planning, academic support, and interpersonal communication tasks, it is important to understand whether their behavior can be reliably shaped by user-defined prompts.
 
@@ -102,36 +102,6 @@ prompt-based-control-ai-agents/
 └── notebooks/
     └── analysis.py
 ```
-
-## Evaluation Dimensions
-
-Each response was manually coded using the following dimensions:
-
-| Dimension             | Description                                                               |
-| --------------------- | ------------------------------------------------------------------------- |
-| Style consistency     | Whether the response matched the assigned agent profile                   |
-| Instruction following | Whether the response followed the prompt-based task rules                 |
-| Controllability       | Whether the agent behavior appeared shaped by the prompt                  |
-| Empathy               | Whether the response showed emotional acknowledgement and supportive tone |
-| Analytical clarity    | Whether the response showed clear structure and task-oriented reasoning   |
-| Rule violation        | Whether the response clearly violated assigned rules                      |
-
-Scores were assigned on a 1–5 scale, except for rule violation, which was coded as 0 or 1.
-
-## Analysis
-
-The analysis was conducted using Python. The script `notebooks/analysis.py` performs the following steps:
-
-1. Loads the coded response scores from `data/coded_scores.csv`
-2. Checks the dataset structure and row count
-3. Computes descriptive statistics
-4. Compares average scores between the two agent profiles
-5. Generates visualizations and saves them to the `figures/` folder
-
-The analysis uses:
-
-* `pandas` for data loading and summary statistics
-* `matplotlib` for visualization
 
 ## Preliminary Findings
 
